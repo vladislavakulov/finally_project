@@ -4,7 +4,7 @@ services:
     # Путь до Dockerfile
     build: ./
     # Имя для создаваемого контейнера
-    container_name: flask
+    container_name: flask-app
     # Создание переменных окружения в контейнере
     environment:
       # для отладки (при запуске в релиз убрать!)

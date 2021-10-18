@@ -1,0 +1,30 @@
+# Default values for flask-app.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+flask:
+  replicaCount: 2
+  image: lobsterpizzax/flask
+  tag: latest
+  resources:
+    requests:
+      memory: 128Mi
+      cpu: 100m
+    limits:
+       memory: 256Mi
+       cpu: 200m
+
+job:
+  image: lobsterpizzax/flask
+  tag: latest
+  command:
+    - python3
+  args:
+    - app.py
+  resources:
+    requests:
+      memory: 128Mi
+      cpu: 100m
+    limits:
+      memory: 256 Mi
+      cpu: 200m
+
