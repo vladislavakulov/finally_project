@@ -19,5 +19,5 @@ spec:
         image: {{ .Values.dep.image }}:{{ .Values.dep.tag }}
         ports:
         - containerPort: 8080
-#      ImagePullSecrets:
-#      -  name: regcred
+#      imagePullSecrets:
+ #     -  name: regcred

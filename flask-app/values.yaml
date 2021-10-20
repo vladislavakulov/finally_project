@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 dep:
-  replicaCount: 2
+  replicas: 2
   image: lobsterpizzax/flask
   tag: latest
 ingress:

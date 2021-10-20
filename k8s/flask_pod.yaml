@@ -8,5 +8,5 @@ spec:
   containers:
   - name: flask
     image: lobsterpizzax/flask:latest
-#  ImagePullSecrets:
-#  - name: regcred
+  imagePullSecrets:
+  - name: regcred
