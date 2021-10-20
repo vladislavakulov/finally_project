@@ -9,5 +9,4 @@ COPY . /app
 WORKDIR /app
 # Устанавливаем зависимости, описанные в requirements.txt
 RUN pip install -r /app/requirements.txt
-ENTRYPOINT ["python3"]
-CMD ["app.py"]
+CMD ["python3","app.py"]

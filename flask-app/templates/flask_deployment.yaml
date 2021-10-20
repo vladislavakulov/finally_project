@@ -1,12 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-flask
-  namespace: {{ .Release.Namespace }}
+  name: {{ .Release.Name }}-dep
   labels:
     app: flask
 spec:
-  replicas: {{ .Values.flask.replicas }}
+  replicas: {{ .Values.dep.replicas }}
   selector:
     matchLabels:
       app: flask
@@ -16,7 +15,9 @@ spec:
         app: flask
     spec:
       containers:
-      - name: {{ .Release.Name }}-flask
-        image: {{ .Values.flask.image }}:{{ .Values.flask.tag }}
+      - name: {{ .Release.Name }}-cntr
+        image: {{ .Values.dep.image }}:{{ .Values.dep.tag }}
         ports:
         - containerPort: 8080
+#      ImagePullSecrets:
+#      -  name: regcred

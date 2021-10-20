@@ -19,3 +19,5 @@ spec:
         image: lobsterpizzax/flask:latest
         ports:
         - containerPort: 8080
+#      ImagePullSecrets:
+#      -  name: regcred
